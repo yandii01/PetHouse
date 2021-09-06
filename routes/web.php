@@ -1,5 +1,5 @@
 <?php
-
+use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -44,13 +44,13 @@ Route::get('/pethouse', 'PagesController@pethouse');
 Route::get('/adpethouse', 'PagesController@adpethouse');
 
 Route::get('/manageuser', 'UserController@index');
-Route::delete('/manageuser/{user}','UserController@destroy');
+Route::delete('/manageuser/{user}', 'UserController@destroy');
 
 Route::get('/product', 'ProdukController@upload');
 Route::post('/product/proses', 'ProdukController@proses_upload');
 Route::patch('/product/{produk}', 'ProdukController@update');
 Route::get('/product/{produk}/editproduct', 'ProdukController@edit');
-Route::delete('/product/{produk}','ProdukController@destroy');
+Route::delete('/product/{produk}', 'ProdukController@destroy');
 Route::get('/products', 'ProdukController@tampil');
 Route::get('/products/{produk}', 'ProdukController@show');
 
@@ -67,7 +67,7 @@ Route::patch('/uploadberita/{berita}', 'BeritaController@update');
 Route::get('/beritas', 'BeritaController@tampil');
 Route::get('/beritas/{berita}', 'BeritaController@show');
 Route::get('/beritas/{berita}/detail', 'BeritaController@beritaview');
-Route::delete('/uploadberita/{berita}','BeritaController@destroy');
+Route::delete('/uploadberita/{berita}', 'BeritaController@destroy');
 
 
 Route::get('/managehotel', 'HotelController@create');
